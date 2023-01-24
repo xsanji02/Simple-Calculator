@@ -10,8 +10,8 @@
 <body>
     <h1>Simple Calculator Using Javascript</h1>
     <div class="parent-container">
-        <div class="outputNUm">
-            <p>Output Here
+        <div>
+            <p id="result">
             <input type="text" id="inputNum" class="inputDesign" name="display" placeholder="0"/>
             </p>
             <div class="child-container">
@@ -20,29 +20,29 @@
                     <td><button id="btnNumber" class="btnDesign" value="7" onclick="displayNum(7)">7</button></td>
                     <td><button id="btnNumber" class="btnDesign" value="8" onclick="displayNum(8)">8</button></td>
                     <td><button id="btnNumber" class="btnDesign" value="9" onclick="displayNum(9)">9</button></td>
-                    <td><button id="btnDelete" class="btnDel" value="Delete">Del</button></td>
+                    <td><button id="btnDelete" class="btnDel" value="Delete" onclick="btnDelete()">Del</button></td>
                 </tr>
                 <tr>
                     <td><button id="btnNumber" class="btnDesign" value="4" onclick="displayNum(4)">4</button></td>
                     <td><button id="btnNumber" class="btnDesign" value="5" onclick="displayNum(5)">5</button></td>
                     <td><button id="btnNumber" class="btnDesign" value="6" onclick="displayNum(6)">6</button></td>
-                    <td><button id="btn+" class="btnOperation" value="">+</button></td>
+                    <td><button id="btn+" class="btnOperation" value="" onclick="displayNum('+')">+</button></td>
                 </tr>
                 <tr>
                     <td><button id="btnNumber" class="btnDesign" value="1" onclick="displayNum(1)">1</button></td>
                     <td><button id="btnNumber" class="btnDesign" value="2" onclick="displayNum(2)">2</button></td>
                     <td><button id="btnNumber" class="btnDesign" value="3" onclick="displayNum(3)">3</button></td>
-                    <td><button id="btnSubtract" class="btnOperation" value="">-</button></td>
+                    <td><button id="btnSubtract" class="btnOperation" value="" onclick="displayNum('-')">-</button></td>
                 </tr>
                 <tr>
                     <td><button id="btnDot" class="btnDesign" value="." onclick="displayNum('.')">.</button></td>
                     <td><button id="btnNumber" class="btnDesign" value="0" onclick="displayNum(0)">0</button></td>
-                    <td><button id="btnDivide" class="btnOperation" value="">/</button></td>
-                    <td><button id="btnMultiply" class="btnOperation" value="">x</button></td>
+                    <td><button id="btnDivide" class="btnOperation" value="" onclick="displayNum('/')">/</button></td>
+                    <td><button id="btnMultiply" class="btnOperation" value="" onclick="displayNum('*')">x</button></td>
                 </tr>
                 <tr>
-                    <td><button id="btnClear" class="btnClear" value="">C</button></td>
-                    <td><button id="btn" class="btnEqualSign" value="">=</button></td>
+                    <td><button id="btnClear" class="btnClear" value="" onclick="Clear()">C</button></td>
+                    <td><button id="btn" class="btnEqualSign" onclick="btnEqual()" value="">=</button></td>
                 </tr>
             </table>
             </div>
