@@ -24,7 +24,7 @@ p {
     color: rgba(42, 36, 56, 0.84);
     font-size: 2.7rem;
     font-weight: 800;
-    width: 25rem;
+    width: 25.8rem;
     height: 8rem;
     border-radius: 20px;
     margin-bottom: 1.5rem;
@@ -44,8 +44,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 30rem;
-    height: 43rem;
+    width: 30.5rem;
+    height: 45rem;
     border-radius: 20px;
     margin-top: 2rem;
     margin-left: 40%;
@@ -59,8 +59,8 @@ body {
     align-items: center;
     flex-wrap: wrap;
     background-color: #DBD8E3;
-    width: 25rem;
-    height: 30rem;
+    width: 25.5rem;
+    height: 30.7rem;
     border-radius: 20px;
     box-shadow: inset 0px -5px 20px -5px rgba(0, 0, 0, 0.8), 0px 5px 20px -5px rgba(0, 0, 0, 0.5);
 
@@ -82,7 +82,7 @@ body {
     color: rgba(42, 36, 56, 0.84);
     font-size: 4rem;
     font-weight: 600;
-    width: 24rem;
+    width: 25.5rem;
     height: 3.3rem;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
@@ -175,4 +175,9 @@ input::placeholder {
 
 button {
     box-shadow: 13px 11px 13px rgba(92, 84, 112, 0.86);
+    ;
+}
+
+table {
+    border-spacing: 7.1px;
 }

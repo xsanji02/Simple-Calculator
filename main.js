@@ -45,24 +45,69 @@ document.addEventListener("keydown", function(event) {
       displayNum('/');
       break;
     case "NumpadDecimal":
+      btnEqual();
+      break;
+    case "NumpadDecimal":
       displayNum('.');
       break;
     case "Equal":
       btnEqual();
       break;
+    
   }
 });
 
-  
-
-function btnEqual(){
+function btnEqual() {
     try {
-    outPutNumber.value = eval(outPutNumber.value);
-    }
-    catch(err) {
+        let input = outPutNumber.value;
+        let lastChar = input[input.length - 1];
+        let operands = input.split(/[+\-*/]/);
+        let operator;
+
+        if (lastChar === "+" || lastChar === "-" || lastChar === "*" || lastChar === "/") {
+            input = input.slice(0, -1);
+        }
+
+        if (input.includes("+")) {
+            operator = "+";
+        } else if (input.includes("-")) {
+            operator = "-";
+        } else if (input.includes("*")) {
+            operator = "*";
+        } else if (input.includes("/")) {
+            operator = "/";
+        }
+
+        switch(operator) {
+            case "+":
+                outPutNumber.value = parseFloat(operands[0]) + parseFloat(operands[1]);
+                break;
+            case "-":
+                outPutNumber.value = parseFloat(operands[0]) - parseFloat(operands[1]);
+                break;
+            case "*":
+                outPutNumber.value = parseFloat(operands[0]) * parseFloat(operands[1]);
+                break;
+            case "/":
+                outPutNumber.value = parseFloat(operands[0]) / parseFloat(operands[1]);
+                break;
+            default:
+                outPutNumber.value = input;
+        }
+    } catch(err) {
         outPutNumber.value = "Error Input";
     }
 }
+
+
+// function btnEqual(){
+//     try {
+//     outPutNumber.value = eval(outPutNumber.value);
+//     }
+//     catch(err) {
+//         outPutNumber.value = "Error Input";
+//     }
+// }
 
 
 
