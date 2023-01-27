@@ -99,6 +99,7 @@ function btnEqual() {
     }
 }
 
+// deleting this code it suggesting that dont use this approach
 
 // function btnEqual(){
 //     try {
